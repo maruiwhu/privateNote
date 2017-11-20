@@ -1,7 +1,7 @@
----
-title:  EditTex设置最大字数，导致IndexOutOfBoundsException
-tags: Android
----
+
+# EditTex设置最大字数，导致IndexOutOfBoundsException
+Tags: Android
+
 
 ### 设置限制最大输入字数的方法
 设置EditText输入框的最大字数可以有以下几种方式
