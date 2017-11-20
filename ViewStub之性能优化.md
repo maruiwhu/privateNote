@@ -27,9 +27,11 @@ A stub is a small program routine that substitutes for a longer program, possibl
 #### ViewStub 怎么用
 
 1. 在布局文件中使用ViewStub标签
+
 ![enter description here][2]
 
 2. 在代码中inflate布局
+
 ![enter description here][3]
 
 这样修改之后在非首次进入时就不需要inflate ViewStub也就减少了加载时间
