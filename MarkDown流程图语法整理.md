@@ -11,7 +11,8 @@ grammar_cjkRuby: true
 @(学习工作)[markdown]
 
 流程图代码在MarkDown中类似如下：
-```
+
+````markdown
 ```flow
 st=>start: Start
 e=>end: End
@@ -21,13 +22,13 @@ cond=>condition: Yes or No
 io=>inputoutput: input something 
 st->opFirst->cond
 cond(yes)->e
-cond(no)->subFirst(left)->opFirst ```
+cond(no)->subFirst(left)->opFirst 
 ```
-
+````
 
 输出实际结果如下：
 
-``` flow!
+``` flow
 st=>start: Start
 e=>end: End
 opFirst=>operation: Operation First
