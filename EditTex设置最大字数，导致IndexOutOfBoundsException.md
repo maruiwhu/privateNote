@@ -1,6 +1,6 @@
 
 # EditTex设置最大字数，导致IndexOutOfBoundsException
-Tags: [Android,bug]
+tags: [Android,bug]
 
 
 ### 设置限制最大输入字数的方法
