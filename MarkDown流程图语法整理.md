@@ -26,7 +26,8 @@ cond(no)->subFirst(left)->opFirst ```
 
 
 输出实际结果如下：
-```flow
+
+``` flow!
 st=>start: Start
 e=>end: End
 opFirst=>operation: Operation First
@@ -38,6 +39,7 @@ st->opFirst->cond
 cond(yes)->io->e
 cond(no)->subFirst(right)->opFirst
 ```
+
 在MarkDown中流程图需要写在	` ``` `	之间
 ### 语法
 流程图的语法分为两部分
