@@ -6,7 +6,7 @@ grammar_cjkRuby: true
 
 
 ### 使用GifView做为加载动画的启动优化
-> Android中加载gif图片，我们一般是使用类似Movie的方式实现，如
+> Android中加载gif图片，我们是使用类似Movie的方式实现，如
 > [GifView](https://github.com/Cutta/GifView)
 
 我们是使用GifView来实现了一个页面loading的动画，所有的加载页面都是使用的这个GifView，通过systemTrace分析发现，每次进入一个页面GifView的inflate方法执行时间都在20ms左右，再加上其他控件的初始化，进入页面的初始化操作肯定会丢帧
