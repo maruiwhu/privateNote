@@ -13,7 +13,6 @@ grammar_code: true
 ![enter description here][1]
 
 
-  [1]: ./images/1083096-64bc44c65fa6cd84.png "1083096-64bc44c65fa6cd84"
   
   通常我们使用Handler是sendMessage或者直接在主线程中post run如：
   ```java
@@ -73,6 +72,16 @@ protected void onCreate(Bundle savedInstanceState) {
 我们知道这个回调会在Activity执行完onResume，页面可见的时候再调用。
 我们可以利用这个接口可以实现一些独特的功能，优化启动速度。
 比如：
+
 1.如果某个图片资源比较大，从res中初始化耗时较长。我们可以先ImageView设置默认图片，然后进入页面之后利用这个回调，在Activity的主线程事情处理完成之后，再在会调用重新给ImageView设置图片。
 这样做就可以提高进入Activity的速度一些必须在主线程中的操作，可以稍微延迟一会再做。
-2.
+![enter description here][2]
+
+2.如果Activity中包含多个Fragment，比如Activity使用ViewPager+Fragment的方式实现，可以打开页面时只初始化当前可见页面，其他页面onCreateView直接先返回一个空白View，比如new FrameLayout。待主线程空闲时再inflate fragment的View。这样减少进入页面时的onMeasure等时间
+
+3.如果必须在主线程但是可以延后一会做的事情，比如一些第三方组件的初始化，可以利用IdleHandler，来实现
+
+
+
+  [1]: ./images/1083096-64bc44c65fa6cd84.png "1083096-64bc44c65fa6cd84"
+  [2]: ./images/1512005413008.jpg
