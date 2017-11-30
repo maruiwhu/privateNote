@@ -68,11 +68,10 @@ protected void onCreate(Bundle savedInstanceState) {
 11-03 15:46:54.929 31033-31033/com.example.marui.myapplication I/MainActivity: onResume: 
 11-03 15:46:55.079 31033-31033/com.example.marui.myapplication I/MainActivity: queueIdle: 
 ```
-可以看到queneIdle的回调会在onResume之后执行。那么具体是在什么时机呢？
+可以看到queneIdle的回调会在onResume之后执行。具体为什么在这里回调，下面单独将Activity的启动流程再讲。
 
-
-
-利用这个接口我们可以实现一些特的功能。
+我们知道这个回调会在Activity执行完onResume，页面可见的时候再调用。
+我们可以利用这个接口可以实现一些独特的功能，优化启动速度。
 比如：
 1.如果某个图片资源比较大，从res中初始化耗时较长。我们可以先ImageView设置默认图片，然后进入页面之后利用这个回调，在Activity的主线程事情处理完成之后，再在会调用重新给ImageView设置图片。
 这样做就可以提高进入Activity的速度一些必须在主线程中的操作，可以稍微延迟一会再做。
