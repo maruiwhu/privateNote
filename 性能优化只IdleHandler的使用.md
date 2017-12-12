@@ -1,11 +1,11 @@
 ---
-title: 性能优化只IdleHandler的使用
+title: 性能优化之IdleHandler的使用
 tags: Android
 grammar_code: true
 ---
 
 
-## 性能优化只IdleHandler的使用
+## 性能优化之IdleHandler的使用
 > Handler是我们常使用的类，用来做异步线程和主线程交互，或者发送message。
 > Handler 和Looper、 MessageQueue 三者相互合作，实现android的Message消息机制。其中Handler负责发送消息和接收消息。MessageQueue负责存放消息、Looper负责提取消息
 
