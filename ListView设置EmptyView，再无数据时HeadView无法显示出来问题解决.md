@@ -1,5 +1,5 @@
 ---
-title: ListView设置EmptyView，再无数据时HeadView无法显示出来问题解决
+title: ListView设置EmptyView，在无数据时HeadView无法显示出来问题解决
 tags: ListView,EmptyView,HeaderView
 grammar_cjkRuby: true
 grammar_code: true
