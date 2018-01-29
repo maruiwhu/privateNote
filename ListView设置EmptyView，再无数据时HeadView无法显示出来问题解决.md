@@ -4,7 +4,7 @@ tags: ListView,EmptyView,HeaderView
 grammar_cjkRuby: true
 grammar_code: true
 ---
-## ListView设置EmptyView，再无数据时HeadView无法显示出来问题解决
+## ListView设置EmptyView，在无数据时HeadView无法显示出来问题解决
 ### 背景
 通常我们如果有个页面显示列表，同时会对列表为空的时候再设置一个空白页面，这个时候我们通常使用ListView->AdapterView 提供的setEmptyView方法，设置一个EmptyView，有系统控件判断，如果列表为空时自动显示空界面。
 但是如果我们的ListView存在一个HeaderView，此时ListView的主体内容为空时，会直接显示EmptyView，HeaderView无法显示，那么如果我们想显示HeaderView该如何处理呢？
