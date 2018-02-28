@@ -31,6 +31,7 @@ gradle --I init.gradle assembleDebug
 2. 加载USER_HOME/.gradle/init.gradle文件
 3. 加载USER_HOME/.gradle/init.d/目录下的以.gradle结尾的文件
 4. 加载GRADLE_HOME/init.d/目录下的以.gradle结尾的文件
+5. 
 #### 脚本的编写
 我们这里使用到的是统一定义仓库的功能，所以这里就介绍下定义仓库的脚本
 ![脚本][1]
