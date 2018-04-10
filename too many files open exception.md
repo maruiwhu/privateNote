@@ -70,6 +70,7 @@ grammar_code: true
 	**初步判定原因是有大量的TCP连接未正常断开，导致fb超过限制。**
 
 2. 既然知道是tcp导致的问题，那么我们通过抓包以及其他手段来看是哪个请求导致的问题。
+
    （1）先看两张图，了解下tcp流程
    
     ![tcp流程][2]
@@ -81,8 +82,8 @@ grammar_code: true
 
   （2）打开应用的常用页面，使用netstat命令查看当前应用的tcp连接
       netstat -nap | grep < pid >
-	  
-	 ![netstat][4]
+	 
+![netstat][4]
 	  
  可以看到明显有几个连接处于CLOSE_WAIT状态
  ip是101.37.134.8端口443
