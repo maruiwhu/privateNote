@@ -82,7 +82,7 @@ grammar_code: true
   （2）打开应用的常用页面，使用netstat命令查看当前应用的tcp连接
       netstat -nap | grep < pid >
 	  
-	  ![netstat][4]
+	 ![netstat][4]
 	  
  可以看到明显有几个连接处于CLOSE_WAIT状态
  ip是101.37.134.8端口443
