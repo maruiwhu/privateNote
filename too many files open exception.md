@@ -48,7 +48,8 @@ grammar_code: true
  adb shell lsof -p <neo_store_pid>
  ```
  为方便测试通过python脚本，定期抓取日志
- [get pid fb][1]
+ 
+=[get fb ][1]
  
 ### 问题分析
 
@@ -101,7 +102,7 @@ grammar_code: true
  
 
 
-  [1]: ./attachments/getfb.py
+  [1]: ./attachments/getfb_1.py
   [2]: ./images/1523352297856.jpg
   [3]: ./images/1523355523956.jpg
   [4]: ./images/v2-9f717c2d57cc29e7f473a500e01f9f6e_hd.jpg "v2-9f717c2d57cc29e7f473a500e01f9f6e_hd"
