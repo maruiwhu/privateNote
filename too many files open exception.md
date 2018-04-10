@@ -48,7 +48,7 @@ grammar_code: true
  adb shell lsof -p <neo_store_pid>
  ```
  为方便测试通过python脚本，定期抓取日志
- =[get pid fb][1]
+ [get pid fb][1]
  
 ### 问题分析
 
