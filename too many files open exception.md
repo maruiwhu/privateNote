@@ -101,7 +101,8 @@ grammar_code: true
  
  ![change][6]
  
- 可以看到再请求结束之后，客户端发送了RST的报文，这样tcp会直接关闭。
+ 可以看到再请求结束之后，客户端发送了RST ACK的报文，
+ 服务端回客户端一个RST的报文，这样tcp会直接关闭。
  
  netstat抓取之后结果也看到，没有CLOSE_WAIT的连接。
  
