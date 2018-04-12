@@ -3,7 +3,7 @@ title: soloader加载异常
 tags: Android,模板,小书匠
 grammar_code: true
 ---
-
+## platform应用使用soloader开源库时 加载so异常
 问题堆栈：
 
 ```java
@@ -61,4 +61,7 @@ https://github.com/facebook/SoLoader
 04-08 09:25:12.187 6579-6579/? I/cr_ChildProcessService: Creating new ChildProcessService pid=6579
 04-08 09:25:12.178 6509-6509/? W/ybrid:Launcher0: type=1400 audit(0.0:2156): avc: denied { execute } for path="/data/data/cn.nubia.hybrid/lib-main/libyoga.so" dev="sda11" ino=32097 scontext=u:r:platform_app:s0:c512,c768 
 ```
-
+### 解决
+1. 最先想到的就是去除selinux的权限控制，但是风险较大，也不一定能通过。所以这条暂不考虑
+2. 阅读soloader的源码，soloader可以自定义so的加载策略。那么可以修改soloder的默认加载策略（从data/data/lib-mani），改为使用平台的默认加载机制。
+最新选用方案2来进行修改
